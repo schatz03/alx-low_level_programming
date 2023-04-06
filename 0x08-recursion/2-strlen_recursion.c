@@ -2,8 +2,8 @@
 /**
  *_strlen_recursion-returns the length of string
  * @s:string
- * return: 0
- * retun :1 +_strlen_recursion(s + 1)
+ * Return: 0
+ * Return: int
  */
 int _strlen_recursion(char *s)
 {
