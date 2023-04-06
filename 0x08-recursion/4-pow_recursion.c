@@ -1,21 +1,21 @@
 #include "main.h"
 /**
  * _pow_recursion - power
- * @x:int
- * @y:int
+ * @i:int
+ * @j:int
  * Return:int
  */
 
-int _pow_recursion(int x, int y)
+int _pow_recursion(int i, int j)
 {
-	if (y < 0)
+	if (j < 0)
 	{
 		return (-1);
 	}
-	else if (y != 0)
-		return (x * _pow_recursion(x, y - 1));
+	else if (j != 0)
+		return (i * _pow_recursion(i, j - 1));
 
-	else if (y == 0)
+	else if (j == 0)
 	{
 		return (1);
 	}
