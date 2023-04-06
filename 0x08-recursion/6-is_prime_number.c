@@ -2,28 +2,28 @@
 
 /**
  * check - checks if number is prime
- * @a:int
- * @b:int
+ * @i:int
+ * @j:int
  * Return: int
  */
-int check(int a, int b)
+int check(int i, int j)
 {
-	if (b < 2 || b % a == 0)
+	if (j < 2 || j % i  == 0)
 		return (0);
-	else if (a > b / 2)
+	else if (i > j / 2)
 		return (1);
 	else
-		return (check(a + 1, b));
+		return (check(i + 1, j));
 }
 
 /**
  * is_prime_number - states of number is prime
- * @n : int
+ * @a : int
  * return : int
  */
-int is_prime_number(int n)
+int is_prime_number(int a)
 {
-	if (n == 2)
+	if (a == 2)
 		return (1);
-	return (check(2, n));
+	return (check(2, a));
 }
