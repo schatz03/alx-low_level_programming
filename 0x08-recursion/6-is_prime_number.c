@@ -18,8 +18,8 @@ int check(int i, int j)
 
 /**
  * is_prime_number - states of number is prime
- * @a : int
- * Return : int
+ * @a:int
+ * Return: int
  */
 int is_prime_number(int a)
 {
