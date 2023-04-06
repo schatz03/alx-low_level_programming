@@ -28,7 +28,7 @@ int palindrome_checker(char *s, int i, int j)
 		return (0);
 }
 /**
- *I is_palindrome - check if s is palindrome
+ * is_palindrome - check if s is palindrome
  * @s: address for string
  *
  * Return: 1 if k is prime, 0 otherwise
