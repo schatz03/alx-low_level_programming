@@ -11,9 +11,9 @@
 int main(int argc, char **argv)
 {
 	int i, n, sum = 0;
-	char *flag;
+	char *nouri;
 
-	if (argc < 2
+	if (argc < 2)
 	{
 		printf("0\n");
 		return (0);
@@ -21,8 +21,8 @@ int main(int argc, char **argv)
 
 	for (i = 1; argv[i]; i++)
 	{
-		n = strtol(argv[i], &flag, 10);
-		if (*flag)
+		n = strtol(argv[i], &nouri, 10);
+		if (*nouri)
 		{
 			printf("Error\n");
 			return (1);
@@ -31,8 +31,8 @@ int main(int argc, char **argv)
 		{
 			sum += n;
 		}
-	
+	}
 	printf("%d\n", sum);
 
 	return (0);
-
+}
