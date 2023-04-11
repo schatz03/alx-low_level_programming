@@ -1,11 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - prints all arguments it receives
- * @argc:int
- * @argv:const
- * Return:0
+ * main - prints all arguments it receives.
+ * @argc: argument int 
+ * @argv: arguments
+ * Return: 0
  */
-int main(int argc, char const *argv)
+int main(int argc, char **argv)
 {
 	int i;
 
