@@ -6,7 +6,6 @@
  *  and initializes it with a specific char
  * @size: the size of the array
  * @c: value initial 
- *
  * Return: a pointer to the array, or NULL if it fails
  * @schatz03
  */
