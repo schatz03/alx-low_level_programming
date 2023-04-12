@@ -22,4 +22,19 @@ int main(int argc, char **argv)
          
 
         sum = strtol(argv[1], &p, 10);
-	count = 0;	
+	count = 0;
+
+        if (!*p)
+	{
+		while (sum  > 1)
+		{
+			for (i = 0; i < sizeof(cent[i]); i++)
+			{
+				if (sum  >= cent[i])
+				{
+					count += sum  / cent[i];
+					total = sum  % cent[i];
+				}
+			}
+		}	
+
