@@ -33,11 +33,11 @@ int main(int argc, char **argv)
 				if (sum  >= cent[i])
 				{
 					count += sum  / cent[i];
-					total = sum  % cent[i];
+					sum  = sum  % cent[i];
 				}
 			}
 		}	
-         if (total == 1)
+         if (sum  == 1)
 			count++;
 	}
 	else
