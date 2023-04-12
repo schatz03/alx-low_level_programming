@@ -37,4 +37,15 @@ int main(int argc, char **argv)
 				}
 			}
 		}	
+         if (total == 1)
+			count++;
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 
+	printf("%d\n", count);
+	return (0);
+}
