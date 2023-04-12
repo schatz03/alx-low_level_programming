@@ -46,4 +46,4 @@ char *str_concat(char *s1, char *s2)
 	result[nouri] = '\0';
 
 	return (result);
-
+}
