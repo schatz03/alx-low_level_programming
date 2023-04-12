@@ -8,7 +8,7 @@
  * Return: a pointer to the array, or NULL if it fails
  * @schatz03
  */
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char S)
 {
 	char *array;
 	unsigned int i;
@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-		array[i] = c;
+		array[i] = S;
 
 	return (array);
 }
