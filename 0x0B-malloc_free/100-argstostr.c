@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of your program.
+ * argstostr - function that concatenates all the arguments of your program.
  * @ac: arguments count
  * @av: arguments vector
  *
@@ -43,7 +43,3 @@ char *argstostr(int ac, char **av)
 		}
 		str[j++] = '\n';
 	}
-	str[j] = '\0';
-
-	return (str);
-}
