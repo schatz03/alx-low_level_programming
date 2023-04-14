@@ -13,12 +13,12 @@ char *argstostr(int ac, char **av)
 	char *str, *s;
 	int i, j, k, nouri = 0;
 
-	if (agrc == 0 || agrv == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < argc; i++)
+	for (i = 0; i < ac; i++)
 	{
-		sum = argv[i];
+		sum = av[i];
 		j = 0;
 
 		while (sum[j++])
@@ -30,9 +30,9 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0, j = 0; i < argc && j < nouri; i++)
+	for (i = 0, j = 0; i < ac && j < nouri; i++)
 	{
-		sum = argv[i];
+		sum = av[i];
 		k = 0;
 
 		while (sum[k])
