@@ -9,7 +9,7 @@ void create_word(char **, char *, int, int, int);
  * @str: the string
  *
  * Return: The function returns a pointer to an array of strings (words)
- * Return: NULL if str == NULL or str == ""
+ * Returns NULL if str == NULL or str == ""
  */
 char **strtow(char *str)
 {
