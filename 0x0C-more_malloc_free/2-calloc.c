@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *_calloc function allocates memory for an array of nmemb elements of 
-  size bytes each and returns a pointer to the allocated memory.
+ * _calloc - allocates memory for an array of @nmemb elements of
+ * @size bytes each and returns a pointer to the allocated memory
+ *
  * @nmemb: allocate memory for array
  * @size: allocate element of size bytes
  *
- * Return: nmemb or size is 0, then _calloc returns NULL
-  If malloc fails, then _calloc returns NULL
+ * Return: pointer to the allocated memory.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	i = malloc(nmemb * size);
 	if (i == NULL)
 		return (NULL);
-	for (j = 0; b < (nmemb * size); j++)
+	for (j = 0; j < (nmemb * size); j++)
 		i[j] = 0;
 	return (i);
 }
