@@ -3,7 +3,7 @@
 
 /**
  * free_dog - dog frees
- * @d: pointer free
+ * @d: pointer of the dog free
  *
  * Return: void
  */
