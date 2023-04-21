@@ -6,10 +6,9 @@
  * @n: is the number of strings passed to the function
  * Return: Always 0
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	char *strlen;
+	char *str;
 	unsigned int i;
 	va_list AP;
 
@@ -19,10 +18,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		strlen = va_arg(ap, char*);
-		if (strlen == NULL)
-			strlen = "(nil)";
-		printf("%s", strlen);
+		str = va_arg(AP, char*);
+		if (str == NULL)
+			str = "(nil)";
+		printf("%s", str);
 		if (i < n - 1)
 			printf("%s", separator);
 	}
