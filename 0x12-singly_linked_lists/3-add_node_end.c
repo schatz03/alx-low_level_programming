@@ -6,20 +6,20 @@
  * @str: field of node
  * Return: size of list
  */
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node = malloc(sizeof(list_t));
-	list_t *node = *head;
+	list_t *node;
 
-	if (*head == NULL)
-	{
-		*head = new_node;
-	}
-
+	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 	{
 		free(new_node);
 		return (NULL);
+	}
+
+	if (*head == NULL)
+	{
+		*head = new_node;
 	}
 	else
 	{
@@ -28,6 +28,13 @@ list_t *add_node_end(list_t **head, const char *str);
 			node = node->next;
 		node->next = new_node;
 	}
+
+	if (str == NULL)
+	{
+		new_node->str = 0;
+		new_node->len = 0;
+	}
+	else
 	{
 		new_node->str = strdup(str);
 		if (new_node->str == 0)
@@ -37,11 +44,7 @@ list_t *add_node_end(list_t **head, const char *str);
 		}
 		new_node->len = _strlen(str);
 	}
-	else (str == NULL)
-	{
-		new_node->str = 0;
-		new_node->len = 0;
-	}
 	new_node->next = NULL;
 	return (new_node);
-}
+}	
+
