@@ -1,15 +1,13 @@
-#include "lists.h"
+#include <stdio.h>
 
-void myStartupFun(void) __attribute__ ((constructor));
-
+void _constructor(void) __attribute__ ((constructor));
 /**
- * constructor - start before main.
- * 
- * Return: text.
+ * _constructor - sentence start before the main
+ * Return: text
  */
 
-void myStartupFun(void)
+void _constructor(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
-		"I bore my house upon my back!\n");
+			"I bore my house upon my back!\n");
 }
