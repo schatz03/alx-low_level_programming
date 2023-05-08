@@ -11,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int O;
-	ssize_t R,W;
+	ssize_t R, W;
 	char buf[READ_BUF_SIZE * 8];
 
 	if (!filename || !letters)
@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	O = open(filename, O_RDONLY);
 	if (O == -1)
 		return (0);
-	R = read(fd, &buf[0], letters);
+	R = read(O, &buf[0], letters);
 	W = write(STDOUT_FILENO, &buf[0], R);
 	close(O);
 	return (R);
