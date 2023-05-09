@@ -9,10 +9,9 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fo;
-	ssize_t rw = 0, len = _strlen(text_content);
+	int fo, rw, len = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 	fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fo == -1)
@@ -21,21 +20,4 @@ int create_file(const char *filename, char *text_content)
 		rw = write(fo, text_content, len);
 	close(fo);
 	return (rw == len ? 1 : -1);
-}
-/**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
- *
- * Return: integer length of string
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	if (!s)
-		return (0);
-
-	while (*s++)
-		i++;
-	return (i);
 }
