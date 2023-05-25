@@ -1,12 +1,6 @@
 #include "lists.h"
 
 /**
- * print_list - print list.
- * @h: pointer to frist node
- *
- * Return: size of lists
- */
-/**
  * _strlen - returns the length of a string
  * @s: the string whose length to check
  *
@@ -22,7 +16,12 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
-
+/**
+ * print_list - print list.
+ * @h: pointer to frist node
+ *
+ * Return: size of lists
+ */
 size_t print_list(const list_t *h)
 {
 	int i = 0;
